@@ -6,7 +6,6 @@
 #define BUILD_INFORMATION "locally built"
 #endif
 
-
 /**
  * These #include directives pull in the Kaleidoscope firmware core,
  * as well as the Kaleidoscope plugins we use in the Model 01's firmware
@@ -408,6 +407,9 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // We start with the LED effect that turns off all the LEDs.
   LEDOff,
 
+  // The stalker effect lights up the keys you've pressed recently
+  StalkerEffect,
+
   // The rainbow effect changes the color of all of the keyboard's keys at the same time
   // running through all the colors of the rainbow.
   LEDRainbowEffect,
@@ -424,14 +426,12 @@ KALEIDOSCOPE_INIT_PLUGINS(
   solidRed, solidOrange, solidYellow, solidGreen, solidBlue, solidIndigo, solidViolet,
 
   // The breathe effect slowly pulses all of the LEDs on your keyboard
-  LEDBreatheEffect,
+  LEDBreatheEffect,d
 
   // The AlphaSquare effect prints each character you type, using your
   // keyboard's LEDs as a display
   AlphaSquareEffect,
 
-  // The stalker effect lights up the keys you've pressed recently
-  StalkerEffect,
 
   // The numpad plugin is responsible for lighting up the 'numpad' mode
   // with a custom LED effect
