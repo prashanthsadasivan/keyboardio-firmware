@@ -391,6 +391,7 @@ USE_MAGIC_COMBOS({.action = toggleKeyboardProtocol,
                   .keys = { R3C6, R2C6, R3C7 }
                  });
 
+
 // First, tell Kaleidoscope which plugins you want to use.
 // The order can be important. For example, LED effects are
 // added in the order they're listed here.
@@ -426,7 +427,7 @@ KALEIDOSCOPE_INIT_PLUGINS(
   solidRed, solidOrange, solidYellow, solidGreen, solidBlue, solidIndigo, solidViolet,
 
   // The breathe effect slowly pulses all of the LEDs on your keyboard
-  LEDBreatheEffect,d
+  LEDBreatheEffect,
 
   // The AlphaSquare effect prints each character you type, using your
   // keyboard's LEDs as a display
@@ -488,6 +489,10 @@ void setup() {
   // This avoids over-taxing devices that don't have a lot of power to share
   // with USB devices
   LEDOff.activate();
+
+  // want to speed up the mouse speeds
+  MouseKeys.speed = 2;
+  MouseKeys.accelDelay = 25;
 }
 
 /** loop is the second of the standard Arduino sketch functions.
